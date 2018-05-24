@@ -1,4 +1,4 @@
-## VueTranslate v1.2.0
+## VueTranslate v1.2.1
 
 A VueJS (1.x, 2.0+) plugin for basic translations.
 
