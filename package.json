@@ -1,11 +1,11 @@
 {
   "name": "vue-translate-plugin",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Basic translations plugins for VueJS (1.x, 2.0+)",
   "main": "dist/vue-translate.common.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/javisperez/vuetranslate.git"
+    "url": "git+https://github.com/moyuye/vuetranslate.git"
   },
   "keywords": [
     "vue",
@@ -16,18 +16,9 @@
     "locales",
     "plugin"
   ],
-  "author": {
-    "name": "Javis Perez",
-    "email": "javisperez@gmail.com"
-  },
   "readme": "README.md",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/javisperez/vuetranslate/issues"
-  },
-  "homepage": "https://github.com/javisperez/vuetranslate#readme",
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "babel-preset-es2015-loose-rollup": "^7.0.0",
     "babel-plugin-transform-runtime": "^6.15.0",

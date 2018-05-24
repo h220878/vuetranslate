@@ -1,5 +1,5 @@
 /**
- * VueTranslate plugin v1.2.0
+ * VueTranslate plugin v1.2.1
  *
  * Handle basic translations in VueJS
  *
@@ -90,6 +90,15 @@ var VueTranslate = {
                         }
 
                         return this.locale[t];
+                    },
+                    nano: function (template, data) {
+                        return template.replace(/\{([\w\.]*)\}/g, function (str, key) {
+                            var keys = key.split("."),
+                                v = data[keys.shift()];
+                            for (var i = 0, l = keys.length; i < l; i++) {
+                                v = v[keys[i]];
+                            }return typeof v !== "undefined" && v !== null ? v : "";
+                        });
                     }
                 }
             });
@@ -102,8 +111,8 @@ var VueTranslate = {
             this.$translate.setLocales(this.$options.locales);
         }, _Vue$mixin.methods = {
             // An alias for the .$translate.text method
-            t: function (t) {
-                return this.$translate.text(t);
+            t: function (t, data) {
+                return this.$translate.nano(this.$translate.text(t), data);
             }
         }, _Vue$mixin.directives = {
             translate: function (el) {
